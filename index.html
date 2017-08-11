@@ -1,49 +1,432 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>React & Redux</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <section>
+                <h1>React & Redux</h1>
+                <img src="design-assets/logos.png" alt="logos">
+            </section>
+            <section>
+                <h2>What we will cover with React</h2>
+                <ul>
+                    <li>Why React?</li>
+                    <li>Rendering in React</li>
+                    <li>Updating Components in React</li>
+                    <li>JSX</li>
+                    <li>Components & Props</li>
+                    <li>State & Lifecycle</li>
+                    <li>Events</li>
+                    <li>Example App</li>
+                    <li>Tooling</li>
+                </ul>
+            </section>
+            <section>
+                <h2>What we will cover with Redux</h2>
+                <ul>
+                    <li>Why Redux?</li>
+                    <li>Actions</li>
+                    <li>Reducers</li>
+                    <li>Store</li>
+                    <li>Data Flow</li>
+                    <li>Middleware</li>
+                    <li>Tooling</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>React</h1>
+            </section>
+            <section>
+                <h2>Why React</h2>
+                <ul>
+                    <li>Declaritive</li>
+                    <li>Reusable Components</li>
+                    <li>Fast Render with Virtual DOM</li>
+                    <li>Clean Abstraction</li>
+                    <li>Great Developers Tools</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Rendering in React</h2>
+                <p data-height="414" data-theme-id="0" data-slug-hash="WORzMV" data-default-tab="js,result"
+                   data-user="decodingdev" data-embed-version="2" data-pen-title="Hello World React" class="codepen">See
+                    the Pen <a href="https://codepen.io/decodingdev/pen/WORzMV/">Hello World React</a> by Decoding Dev (<a
+                            href="https://codepen.io/decodingdev">@decodingdev</a>) on <a href="https://codepen.io">CodePen</a>.
+                </p>
+                <script async src="//production-assets.codepen.io/assets/embed/ei.js"></script>
+            </section>
+            <section>
+                <h2>JSX</h2>
+                <p data-height="446" data-theme-id="0" data-slug-hash="jwyzJb" data-default-tab="js,result"
+                   data-user="decodingdev" data-embed-version="2" data-pen-title="ReactJS Adding in JSX"
+                   class="codepen">See the Pen <a href="https://codepen.io/decodingdev/pen/jwyzJb/">ReactJS Adding in
+                    JSX</a> by Decoding Dev (<a href="https://codepen.io/decodingdev">@decodingdev</a>) on <a
+                        href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+            </section>
+            <section>
+                <h2>Updating Components in React</h2>
+                <p data-height="285" data-theme-id="0" data-slug-hash="NgdMKq" data-default-tab="js,result"
+                   data-user="decodingdev" data-embed-version="2" data-pen-title="React Clock - Updating React Elements"
+                   class="codepen">See the Pen <a href="https://codepen.io/decodingdev/pen/NgdMKq/">React Clock -
+                    Updating React Elements</a> by Decoding Dev (<a
+                        href="https://codepen.io/decodingdev">@decodingdev</a>) on <a
+                        href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+            </section>
+            <section>
+                <h2>Components &amp; Props</h2>
+                <p data-height="500" data-theme-id="0" data-slug-hash="qjJbXa" data-default-tab="js,result"
+                   data-user="decodingdev" data-embed-version="2" data-pen-title="React Components" class="codepen">See
+                    the Pen <a href="https://codepen.io/decodingdev/pen/qjJbXa/">React Components</a> by Decoding Dev
+                    (<a href="https://codepen.io/decodingdev">@decodingdev</a>) on <a
+                            href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+            </section>
+            <section>
+                <h2>General Types of Components</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Container</th>
+                        <th>Presentational</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Focus on how things work</li>
+                                <li>Generally a Class</li>
+                                <li>Has State</li>
+                                <li>Extends React.Component</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Focus on how things look</li>
+                                <li>Generally a Function</li>
+                                <li>Only Contains Props</li>
+                                <li>Read from props</li>
+                                <li>Invoke callbacks on Props</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>State & Lifecycle</h2>
+                <p data-height="500" data-theme-id="0" data-slug-hash="dRgGqz" data-default-tab="js,result"
+                   data-user="decodingdev" data-embed-version="2" data-pen-title="Clock with React State"
+                   class="codepen">See the Pen <a href="https://codepen.io/decodingdev/pen/dRgGqz/">Clock with React
+                    State</a> by Decoding Dev (<a href="https://codepen.io/decodingdev">@decodingdev</a>) on <a
+                        href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+            </section>
+            <section>
+                <h2>Events</h2>
+                <ul>
+                    <li>use camel case such as onClick={activateLasers}</li>
+                    <li>preventDefault explicitly instead of return false</li>
+                    <li>no need to call addEventListener</li>
+                    <li>make use of constructor in class to add handler method to component</li>
+                </ul>
+                <p data-height="265" data-theme-id="0" data-slug-hash="EXOdYP" data-default-tab="js,result"
+                   data-user="decodingdev" data-embed-version="2" data-pen-title="Toggle" class="codepen">See the Pen <a
+                        href="https://codepen.io/decodingdev/pen/EXOdYP/">Toggle</a> by Decoding Dev (<a
+                        href="https://codepen.io/decodingdev">@decodingdev</a>) on <a
+                        href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+            </section>
+            <section>
+                <h2>Example & Tooling</h2>
+                <ul>
+                    <li>Create React App (CLI)</li>
+                    <li>React Developers Tools</li>
+                    <li><a href="http://localhost:3000/" target="_blank">example</a></li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Redux</h1>
+            </section>
+            <section>
+                <h2>Why Redux?</h2>
+                <ul>
+                    <li>Provides Predictable State Management</li>
+                    <li>Easy To Test</li>
+                    <li>Excellent Tooling</li>
+                    <li>Unidirectional Data Flow</li>
+                </ul>
+            </section>
+            <section>
+                <h2>How does Redux Work?</h2>
+                <ul>
+                    <li>One Immutable Store</li>
+                    <li>Actions and Reducers</li>
+                    <li>Actions trigger changes</li>
+                    <li>Reducers return and update state</li>
+                </ul>
+            </section>
+            <section>
+                <img src="design-assets/redux-flow.png" alt="">
+            </section>
+            <section>
+                <h2>Redux Flow</h2>
+                <p>Create provider in app root</p>
+                <pre><code><Provider store={store}></code></pre>
+            </section>
+            <section>
+                <h2>Store</h2>
+                <ul>
+                    <li>Holds application state</li>
+                    <li>Allows access to state via getState()</li>
+                    <li>Allows state to be updated via dispatch(action)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>How do you create a store</h2>
+                <pre><code>import { createStore } from 'redux'
+import todoApp from './reducers'
+let store = createStore(todoApp)</code></pre>
+            </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+            <section>
+                <h2>In React Component</h2>
+                <p>Use connect to map the stores state and dispatch to the props of a component</p>
+                <pre><code>const mapStateToProps = state => {
+  return {todo : state.todos[0]}
+}
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+const mapDispatchToProps = dispatch => {
+  return {
+    destroyTodo : () => dispatch({type : 'DESTROY_TODO'})
+  }
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(TodoItem)</code></pre>
+            </section>
+            <section>
+                <h2>Dispatch Actions</h2>
+                <p>To change data you dispatch an action</p>
+                <pre><code>const mapDispatchToProps => dispatch => {
+  return {
+    getLinks: (topicName) => dispatch(getLinks(topicName)),
+    startAdd: (topicName) => dispatch(startAdd(topicName)),
+  };
+}</code></pre>
+            </section>
+            <section>
+                <h2>Selectors</h2>
+                <ul>
+                    <li>Compute derived data, allowing Redux to store the minimal possible state</li>
+                    <li>Are composable and they can be used as input to other selectors</li>
+                </ul>
+                <pre><code>import { createSelector } from 'reselect'
+
+const getVisibilityFilter = (state, props) =>
+  state.todoLists[props.listId].visibilityFilter
+
+const getTodos = (state, props) =>
+  state.todoLists[props.listId].todos
+
+const getVisibleTodos = createSelector(
+  [ getVisibilityFilter, getTodos ],
+  (visibilityFilter, todos) => {
+    switch (visibilityFilter) {
+      case 'SHOW_COMPLETED':
+        return todos.filter(todo => todo.completed)
+      case 'SHOW_ACTIVE':
+        return todos.filter(todo => !todo.completed)
+      default:
+        return todos
+    }
+  }
+)
+
+export default getVisibleTodos</code></pre>
+            </section>
+            <section>
+                <h2>Actions</h2>
+                <ul>
+                <li>Action is just a plain js object</li>
+                    <li>Every change is an Action</li>
+                </ul>
+                    <pre><code>export function requestLinks(topicName) {
+  return {
+    type: REQUEST_LINKS,
+    topicName,
+  };
+}</code></pre>
+            </section>
+            <section>
+                <h2>Actions</h2>
+                <ul>
+                    <li>Create send data from your application to your store</li>
+                    <li>Only source of info for the store</li>
+                    <li>Send to store using store.dispatch()</li>
+                    <li>Must contain type</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Reducers</h2>
+                <ul>
+                    <li>Tie state and actions together with Reducers</li>
+                    <li>Function that takes state and action as argument</li>
+                    <li>Returns next state</li>
+                </ul>
+                <pre><code>function linkListContainerReducer(state, action) {
+  switch (action.type) {
+    case REQUEST_LINKS_SUCCEEDED:
+      return state.set('links', action.links);
+    case ADD_LINK_SUCCESS:
+      return addLink(state, action.link);
+    default:
+      return state;
+  }
+}</code></pre>
+            </section>
+            <section>
+                <h2>Reducers</h2>
+                <ul>
+                    <li>Specify how the application state changes in response to an action</li>
+                    <li>Based on array.reduce()</li>
+                    <li>Keep data separate from the UI state</li>
+                    <li>Pure function</li>
+                    <li>(previousState, action) => newState</li>
+                    <li>Think of app's state as a database</li>
+                    <li>Keep entities in objects with an ID </li>
+                    <li>Use IDs to reference it from other entities, or lists</li>
+                </ul>
+            </section>
+            <section>
+                <img src="design-assets/reducers.png" alt="">
+            </section>
+            <section>
+                <h2>Things you should never do in a Reducer</h2>
+                <ul>
+                    <li>Mutate its arguments</li>
+                    <li>Perform side effects like API calls and routing transitions</li>
+                    <li>Call non-pure functions, e.g. Date.now() or Math.random()</li>
+                </ul>
+            </section>
+            <section>
+                <h2>How to use reducers</h2>
+                <ul>
+                    <li>import the actions</li>
+                    <li>Initialize state</li>
+                    <li>Use switch statement to catch action</li>
+                    <li>Change state use object.assign without mutating it</li>
+                    <li>Use default to pass the previous state</li>
+                </ul>
+            </section>
+            <!--<section>
+                <h2>Data Flow</h2>
+                <ul>
+                    <li>You call store.dispatch(action)</li>
+                    <li>The Redux store calls the reducer function you gave it</li>
+                    <li>The root reducer may combine the output of multiple reducers into a single state tree</li>
+                    <li>The Redux store saves the complete state tree returned by the root reducer</li>
+                </ul>
+            </section>-->
+            <section>
+                <h2>Middleware</h2>
+                <ul>
+                    <li>Talking to API asynchronously</li>
+                    <li>Logging</li>
+                    <li>Crash Reporting</li>
+                    <li>Routing</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Middleware</h2>
+                <ul>
+                    <li>Redux Saga</li>
+                    <li>Redux Thunk</li>
+                    <li>Redux Promise</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Other Libraries</h2>
+                <ul>
+                    <li>Immutable.js - Always makes a copy of state so you don’t mutate it.</li>
+                    <li>Reselect - Caches previous tree state to boost performance
+                        compute and derive date from the underlying state
+                        chain able and composable</li>
+                    <li>Redux Saga - Redux middleware for async using generators
+                        access to all the actions being dispatched</li>
+                    <li>For Internationalization l18n use Formatted Messages component</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Other Libraries Continued</h2>
+                <ul>
+                    <li>Routing - react-router and react-router-redux</li>
+                    <li>CSS Modules - creates unique class names to isolate to components</li>
+                    <li>Post CSS - helper CSS processor for things like Auto-Prefixer</li>
+                    <li>Testing - Enzyme, Jest, Mocha</li>
+                    <li>Webpack, Babel, Redux DevTools, React Boilerplate</li>
+                    <li>Proptypes</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <h1><a href="http://localhost:8888" target="_blank">Demo</a></h1>
+        </section>
+        <section>
+            <h1>Thank You</h1>
+            <p>Feel free to ask questions</p>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+</script>
+</body>
 </html>
